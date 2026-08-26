@@ -25,7 +25,8 @@ class Plant:
 		return f"{self.name}: {self._height}cm, {self._age} days old"
 
 	def grow(self):
-		self.set_height = round(self._height * self.growth, 2)
+		new_value = round(self._height * self.growth, 2)
+		self.set_height(new_value)
 	def aged(self):
 		self._age += 1
 	def get_height(self):
