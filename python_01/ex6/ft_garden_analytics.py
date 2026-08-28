@@ -91,6 +91,8 @@ class Vegetable(Plant):
 	def grow(self):
 		super().grow()
 		self.nutritional_value += 0.5
+class Seed(Flower):
+	
 if __name__ == "__main__":
 
 	print("====Flower====")
