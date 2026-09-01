@@ -91,8 +91,16 @@ class Vegetable(Plant):
 	def grow(self):
 		super().grow()
 		self.nutritional_value += 0.5
+
 class Seed(Flower):
-	
+	def show(self):
+		base_info = super().show()
+		if super().self.bloomed == 0:
+			bloom_info = "Seeds: 0"
+		else:
+			bloom_info = "Seeds: 42"
+		return f"{base_info}\n{bloom_info}"
+
 if __name__ == "__main__":
 
 	print("====Flower====")
@@ -120,3 +128,6 @@ if __name__ == "__main__":
 	print(Plant.check_year_old(p3.get_age()))
 	p4 = Plant.create_anonymous()
 	print(p4.show())
+
+	rose = Seed(p1)
+	print(rose.show())
