@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 
 class Plant:
-	def __init__(self, name, height, age):
-		self.name = name
-		self.height = height
-		self.age = age
+    def __init__(self, name: str, height: float, age: int) -> None:
+        self.name = name
+        self.height = height
+        self.age = age
 
-	def show(self):
-		return f"{self.name}: {self.height}cm, {self.age} days old"
+    def show(self) -> str:
+        return f"{self.name}: {self.height}cm, {self.age} days old"
 
 
-plants = [
-	Plant("Rose", 25, 30),
-	Plant("Sunflower", 80, 45),
-	Plant("Cactus", 15, 120)
-]
-
-print("=== Garden Plant Registry ===")
-for i in plants:
-	print(i.show())
+if __name__ == "__main__":
+    plants = [
+        Plant("Rose", 25, 30),
+        Plant("Sunflower", 80, 45),
+        Plant("Cactus", 15, 120)
+    ]
+    print("=== Garden Plant Registry ===")
+    for i in plants:
+        print(i.show())
